@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+//create shake animation
+@keyframes shake {
+    //shake animation
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    40% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    50% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+}
+
+.url:invalid:not(:focus) {
+    background-color: rgb(248 113 113);
+    animation: shake 0.3s;
+}
+
+.url:invalid:not(:focus)::placeholder {
+    color: rgba(0, 57, 189, 0.437);
+}
